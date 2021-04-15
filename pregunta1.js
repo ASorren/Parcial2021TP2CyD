@@ -3,7 +3,7 @@
  * solo los numeros pares y solo numeros impares respectivamente
  */
 
-    // modulo = resto, para par e inpar hay que fijarse si sobra o no
+    // modulo = resto, para par e impar hay que fijarse si sobra o no
 
 const even = function(numbers){
     const even = numbers.filter( num => num % 2 == 0);
