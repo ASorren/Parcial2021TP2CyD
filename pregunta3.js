@@ -3,6 +3,15 @@
 // si la longitud del array es < 3 se debe retornar undefined
 
 const greater3 = nums => {
+    if(nums.length < 3){
+        return undefined;
+    }
+    else{
+        nums.sort((a, b) => b - a)
+        const arrayNoRep = [... new Set(nums)]
+        return arrayNoRep[2]
+
+    }
     
 }
 

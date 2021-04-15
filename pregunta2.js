@@ -15,6 +15,17 @@
   }
 
 const sale = function (article, cant){
+  if(cant <= inventory[article]){
+    let devo =0;
+    inventory[article] -= cant  // -= es como += pero resta 
+    return 200
+
+  }  else{
+    
+    return 500
+  }
+  
+
   
 }
 

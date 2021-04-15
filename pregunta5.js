@@ -20,3 +20,39 @@ const beers = [
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
 ];
 
+
+function agregarLabel(beers){
+
+  return beers.map((beer) => ({...beer, label: nuevoLabel(beer)}));
+
+}
+
+
+
+function nuevoLabel(beer){
+  let urlSplit = beer.label.split("/");
+  
+  urlSplit.pop(); // saco  archivo a reemplazar
+  let nombreCarp = urlSplit.pop() //  guardo nombre carpeta para insertar
+  let nombreArch = urlSplit.pop() // guardo nombre archivo para insertar
+
+  // falta nombre cerveza
+  let nombreCer = beer.name;
+
+  // nuevo urlLabel
+  let nuevoLabel = " https://tecnoshare.sharepoint.com/sites"
+
+    return `${nuevoLabel}/${nombreCer}/${nombreCarp}/${nombreArch}.png`
+
+  
+  
+ 
+
+   
+
+
+}
+
+
+console.log(agregarLabel(beers));
+

@@ -21,9 +21,16 @@
    * @param {*} discoveries 
    * @param {*} inventors 
    */
+
+  // sin un operador ternario no me funciona, con un if normal rompe, pregunta para el profe
+
   function addDiscoveries(inventor, discoveries, inventors){
+    return inventors.map (inve => inve.last == inventor ? inve = {...inve, disco: discoveries}: inve)
+
       
-  }
+  } 
+
+
 
   console.log(addDiscoveries('Einstein', 
   ['Teoría de la relatividad especial','Equivalencia entre masa y energía','Teoría de la relatividad general'], inventors

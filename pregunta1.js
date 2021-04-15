@@ -3,12 +3,18 @@
  * solo los numeros pares y solo numeros impares respectivamente
  */
 
+    // modulo = resto, para par e inpar hay que fijarse si sobra o no
+
 const even = function(numbers){
-    
+    const even = numbers.filter( num => num % 2 == 0);
+    return even;
+
+
 }
 
 const odd = function(numbers){
-
+    const odd = numbers.filter( num => num % 2 != 0);
+    return odd;
 }
 
 // TESTS (no modificar)
